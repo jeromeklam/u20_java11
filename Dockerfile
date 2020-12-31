@@ -11,5 +11,9 @@ ENV LC_ALL fr_FR.UTF-8
 
 ## Installation des utilitaires de base
 RUN apt-get update && apt-get -y install default-jdk
+RUN apt-get install -y maven
+
+## Port ??
+EXPOSE 8080
 
 CMD ["/bin/echo", "Hello world"]

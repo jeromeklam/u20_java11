@@ -47,7 +47,7 @@ function build()
 # Exécution
 function run()
 {
-  docker run -d --name="${NAME}" ${DOCKER_USER}/${NAME}
+  docker run -d -p 8080:8080 --name="${NAME}" ${DOCKER_USER}/${NAME}
 }
 
 # Bash for windows
@@ -59,7 +59,7 @@ function wbash()
 # Bash
 function bash()
 {
-  docker run -t -i --name="${NAME}" ${DOCKER_USER}/${NAME} /bin/bash
+  docker run -t -i -p 8080:8080 --name="${NAME}" ${DOCKER_USER}/${NAME} /bin/bash
 }
 
 # Push to registry
